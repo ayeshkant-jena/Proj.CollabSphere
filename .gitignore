@@ -1,0 +1,59 @@
+####################################
+# GENERAL
+####################################
+.env
+.env.*
+*.log
+.DS_Store
+
+####################################
+# NODE / REACT / VITE
+####################################
+node_modules/
+dist/
+build/
+.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+####################################
+# DJANGO / PYTHON
+####################################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+venv/
+env/
+ENV/
+.virtualenv/
+pip-wheel-metadata/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+coverage/
+htmlcov/
+
+####################################
+# DJANGO SETTINGS
+####################################
+local_settings.py
+settings_local.py
+
+####################################
+# MEDIA & STATIC (OPTIONAL)
+####################################
+media/
+staticfiles/
+
+####################################
+# IDE / EDITORS
+####################################
+.vscode/
+.idea/
+*.swp
