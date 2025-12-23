@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { useEffect, useState } from "react";
 import { checkHealth } from "../api/health";
+import Login from "../pages/Auth/Login";
+import ProtectedRoute from "./ProtectedRoute";
 const AppRoutes = () => {
 
   const Home = () => {
@@ -23,14 +25,29 @@ const AppRoutes = () => {
         {/* Public Routes */}
         {/* <Route path="/" element={<h1>Welcome to CollabSphere</h1>} /> */}
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<h1>Login Page</h1>} />
+        <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<h1>Register Page</h1>} />
 
         {/* Brand Routes */}
-        <Route path="/brand/dashboard" element={<h1>Brand Dashboard</h1>} />
+        <Route
+          path="/brand/dashboard"
+          element={
+            <ProtectedRoute role="brand">
+              <BrandDashboard />
+            </ProtectedRoute>
+          }
+        />
 
         {/* Influencer Routes */}
-        <Route path="/influencer/dashboard" element={<h1>Influencer Dashboard</h1>} />
+        <Route path="" element={<h1>Influencer Dashboard</h1>} />
+        <Route
+          path="/influencer/dashboard"
+          element={
+            <ProtectedRoute role="influencer">
+              <InfluencerDashboard />
+            </ProtectedRoute>
+          }
+        />
 
         {/* Fallback */}
         <Route path="*" element={<h1>404 - Page Not Found</h1>} />

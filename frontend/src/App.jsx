@@ -8,12 +8,12 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    // <AppRoutes/>
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <h1 className="text-5xl font-bold text-blue-600">
-        Tailwind is finally working
-      </h1>
-    </div>
+    <AppRoutes/>
+    // <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    //   <h1 className="text-5xl font-bold text-blue-600">
+    //     Tailwind is finally working
+    //   </h1>
+    // </div>
     // <>
     //   <div>
     //     <a href="https://vite.dev" target="_blank">
