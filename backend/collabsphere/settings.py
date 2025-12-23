@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'core',
     'accounts',
+    'influencers',
 ]
 
 MIDDLEWARE = [
