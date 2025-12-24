@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { checkHealth } from "../api/health";
 import Login from "../pages/Auth/Login";
 import ProtectedRoute from "./ProtectedRoute";
+import InfluencerProfile from "../pages/InfluencerDashboard/Profile";
 const AppRoutes = () => {
 
   const Home = () => {
@@ -44,7 +45,7 @@ const AppRoutes = () => {
           path="/influencer/dashboard"
           element={
             <ProtectedRoute role="influencer">
-              <InfluencerDashboard />
+              <InfluencerProfile />
             </ProtectedRoute>
           }
         />
