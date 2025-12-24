@@ -5,6 +5,9 @@ import { checkHealth } from "../api/health";
 import Login from "../pages/Auth/Login";
 import ProtectedRoute from "./ProtectedRoute";
 import InfluencerProfile from "../pages/InfluencerDashboard/Profile";
+import BrandProfile from "../pages/BrandDashboard/Profile";
+import Campaigns from "../pages/BrandDashboard/Campaigns";
+
 const AppRoutes = () => {
 
   const Home = () => {
@@ -34,10 +37,20 @@ const AppRoutes = () => {
           path="/brand/dashboard"
           element={
             <ProtectedRoute role="brand">
-              <BrandDashboard />
+              <BrandProfile />
             </ProtectedRoute>
           }
         />
+
+        <Route
+          path="/brand/campaigns"
+          element={
+            <ProtectedRoute role="brand">
+              <Campaigns />
+            </ProtectedRoute>
+          }
+        />
+
 
         {/* Influencer Routes */}
         <Route path="" element={<h1>Influencer Dashboard</h1>} />
