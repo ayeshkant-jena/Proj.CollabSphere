@@ -51,6 +51,14 @@ const AppRoutes = () => {
           }
         />
 
+        <Route
+          path="/brand/campaigns/:campaignId/matches"
+          element={
+            <ProtectedRoute role="brand">
+              <Matches />
+            </ProtectedRoute>
+          }
+        />
 
         {/* Influencer Routes */}
         <Route path="" element={<h1>Influencer Dashboard</h1>} />

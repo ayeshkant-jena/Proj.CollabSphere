@@ -29,4 +29,5 @@ urlpatterns = [
     path('api/auth/', include('accounts.urls')),
     path("api/influencer/", include("influencers.urls")),
     path("api/brand/", include("brands.urls")),
+    path("api/campaigns/", include("campaigns.urls")),
 ]
